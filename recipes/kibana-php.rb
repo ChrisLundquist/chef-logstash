@@ -20,6 +20,6 @@ template "#{node['logstash']['basedir']}/kibana/current/config.php" do
   owner node['logstash']['user']
   group node['logstash']['group']
   mode "0755"
-  variables(:es_server_ip => es_server_ip)
+  variables(:es_server_ip => node['logstash']['elasticsearch_ip'])
 end
 
